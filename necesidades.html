@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Necesidades · Cooperadora Hospital Penna</title>
+  <meta name="description" content="Catálogo de necesidades prioritarias del Hospital Penna, con su costo y el avance de la recaudación.">
+  <link rel="icon" href="img/isotipo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body data-pagina="necesidades">
+  <div id="encabezado"></div>
+
+  <main id="contenido">
+    <section class="hero-chico">
+      <div class="contenedor">
+        <span class="antetitulo">Catálogo público</span>
+        <h1>Necesidades prioritarias</h1>
+        <p>Cada ítem fue pedido por la Dirección del hospital, que también define el orden de urgencia. Ves cuánto cuesta, cuánto ya se compró y cuánto falta. Cada entrega se publica en Transparencia.</p>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="filtros" role="group" aria-label="Filtrar por etapa">
+          <button class="filtro" data-filtro="todas" aria-pressed="true">Todas</button>
+          <button class="filtro" data-filtro="anio1" aria-pressed="false">Primer año</button>
+          <button class="filtro" data-filtro="anio2" aria-pressed="false">Segundo año</button>
+          <button class="filtro" data-filtro="centenario" aria-pressed="false">Centenario (cumplidas)</button>
+        </div>
+        <div class="grilla grilla-3" id="lista-necesidades"></div>
+        <p style="margin-top:20px;font-size:.85rem;color:var(--gris-texto)">Metas y costos según el plan de la Cooperadora (precios de mercado de 2026).</p>
+      </div>
+    </section>
+
+    <section class="seccion seccion--gris">
+      <div class="contenedor dos-columnas">
+        <div>
+          <span class="antetitulo">La meta grande</span>
+          <h2>¿Por qué un Arco en C para la guardia?</h2>
+          <div class="historia">
+            <p>Hace poco, un paciente joven llegó a la guardia del Penna con un ACV. El equipo lo estabilizó, pero tuvo que ser derivado a otro hospital porque la guardia no cuenta con el equipamiento necesario para continuar el tratamiento.</p>
+            <p style="margin:0">Un <strong>Arco en C vascular</strong> permitiría resolver esos casos acá, sin perder tiempo en traslados. Es el objetivo del segundo año de la Cooperadora, con el apoyo de un padrinazgo corporativo.</p>
+          </div>
+          <p style="margin-top:22px"><a class="btn btn--donar" href="dona.html">Doná a la Cooperadora</a></p>
+        </div>
+        <div class="foto-redonda">
+          <img src="img/rayos-x.jpg" alt="Sala de rayos X del hospital con un equipo de radiología digital" loading="lazy">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="pie"></div>
+  <script src="js/datos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

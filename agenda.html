@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agenda 2027 · Cooperadora Hospital Penna</title>
+  <meta name="description" content="Calendario 2027 de jornadas comunitarias y campañas de la Cooperadora del Hospital Penna.">
+  <link rel="icon" href="img/isotipo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body data-pagina="agenda">
+  <div id="encabezado"></div>
+
+  <main id="contenido">
+    <section class="hero-chico">
+      <div class="contenedor">
+        <span class="antetitulo">Calendario de eventos 2027</span>
+        <h1>Un año para sumarse al Penna</h1>
+        <p>Jornadas abiertas en plazas y sedes de nuestros aliados del barrio, pensadas desde la identidad materno-infantil del hospital. Todas sin costo para la Cooperadora: espacios cedidos, insumos donados y voluntarios.</p>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <div class="contenedor">
+        <div id="lista-eventos"></div>
+      </div>
+    </section>
+
+    <section class="seccion seccion--gris" id="voluntariado">
+      <div class="contenedor dos-columnas">
+        <div>
+          <span class="antetitulo">Voluntariado</span>
+          <h2>Sumate como voluntario</h2>
+          <p class="bajada">Cualquier persona puede sumarse. Necesitamos manos para las mesas informativas, la atención a donantes y la logística de las jornadas.</p>
+          <form class="form-donacion" data-simulado="El coordinador de voluntarios te va a contactar antes de la próxima jornada." novalidate>
+            <div class="campo"><label for="v-nombre">Nombre y apellido</label><input id="v-nombre" type="text" autocomplete="name" required></div>
+            <div class="campo"><label for="v-mail">Mail o WhatsApp</label><input id="v-mail" type="text" required></div>
+            <button class="btn btn--primario" type="submit">Quiero ser voluntario</button>
+          </form>
+        </div>
+        <div class="foto-redonda">
+          <img src="img/mural-pediatria.jpg" alt="Mural infantil con animales en el área de pediatría del hospital" loading="lazy">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="pie"></div>
+  <script src="js/datos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cooperadora Hospital Penna</title>
+  <meta name="description" content="Prototipo académico del portal de la Asociación Civil Cooperadora del Hospital Penna: necesidades, donaciones y rendición de cuentas.">
+  <link rel="icon" href="img/isotipo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body data-pagina="index">
+  <div id="encabezado"></div>
+
+  <main id="contenido">
+    <!-- Hero: etapa CONOCE del Customer Journey -->
+    <section class="hero">
+      <div class="contenedor">
+        <div class="lema">Nacemos juntos, vivimos Penna</div>
+        <h1>Cooperadora del Hospital Penna</h1>
+        <p>Comprometidos por una salud pública de calidad.</p>
+        <div class="acciones">
+          <a class="btn btn--donar" href="dona.html">Doná hoy</a>
+          <a class="btn btn--claro" href="nosotros.html">Conocenos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contadores de transparencia -->
+    <div class="contenedor">
+      <div class="contadores">
+        <div class="contador">
+          <div class="numero" data-contador="recaudado">$0</div>
+          <div class="etiqueta">recaudados para el hospital</div>        </div>
+        <div class="contador">
+          <div class="numero" data-contador="socios">0</div>
+          <div class="etiqueta">socios con cuota mensual</div>        </div>
+        <div class="contador">
+          <div class="numero" data-contador="entregas">0</div>
+          <div class="etiqueta">bienes ya entregados al hospital</div>        </div>
+      </div>
+    </div>
+
+    <!-- Accesos rápidos -->
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="grilla grilla-3">
+          <article class="tarjeta">
+            <div class="icono icono--rojo" data-icono="corazon"></div>
+            <h3>Realizá una donación</h3>
+            <p>Asociate con una cuota mensual desde $2.000 o hacé un aporte único. Todo bancarizado, sin efectivo.</p>
+            <a class="enlace" href="dona.html">Quiero donar</a>
+          </article>
+          <article class="tarjeta">
+            <div class="icono" data-icono="lista"></div>
+            <h3>Necesidades del hospital</h3>
+            <p>Lo que la Dirección del hospital nos pidió, con su costo y cuánto falta para conseguirlo.</p>
+            <a class="enlace" href="necesidades.html">Ver el catálogo</a>
+          </article>
+          <article class="tarjeta">
+            <div class="icono icono--azul" data-icono="lupa"></div>
+            <h3>Rendición de cuentas</h3>
+            <p>Facturas, actas de donación y fotos de cada compra entregada. Para que sepas exactamente dónde está tu aporte.</p>
+            <a class="enlace" href="transparencia.html">Ver la transparencia</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ¿Qué hacemos? -->
+    <section class="seccion seccion--gris">
+      <div class="contenedor dos-columnas">
+        <div>
+          <span class="antetitulo">¿Qué hacemos?</span>
+          <h2>Un puente entre la comunidad y el hospital</h2>
+          <p class="bajada">El Hospital Penna es público y gratuito, y por ley no puede recibir donaciones de dinero en forma directa. La Cooperadora es la asociación civil que canaliza esa ayuda de manera formal y transparente.</p>
+          <ul class="lista-check">
+            <li>Recibimos aportes de vecinos y empresas en una cuenta oficial del Banco Ciudad.</li>
+            <li>Compramos lo que la Dirección del hospital define como prioritario.</li>
+            <li>Publicamos cada factura, acta de donación y foto del bien en uso.</li>
+          </ul>
+          <a class="btn btn--secundario" href="nosotros.html">Autoridades y normativa</a>
+        </div>
+        <div class="foto-redonda">
+          <img src="img/mural-pediatria.jpg" alt="Mural infantil con un hipopótamo, jirafas, un elefante y un búho en el área de pediatría del hospital" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Necesidades destacadas: etapa SE INTERESA -->
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="titulo-seccion">
+          <span class="antetitulo">Necesidades prioritarias</span>
+          <h2>Esto es lo que el hospital necesita hoy</h2>
+          <p class="bajada">Necesidades relevadas con la Dirección del hospital, que define su orden de urgencia. Seguí el avance de cada compra.</p>
+          <div class="linea-turquesa"></div>
+        </div>
+        <div class="grilla grilla-3" id="lista-necesidades" data-limite="3"></div>
+        <p style="margin-top:28px"><a class="btn btn--primario" href="necesidades.html">Ver todas las necesidades</a></p>
+      </div>
+    </section>
+
+    <!-- Novedades / entregas: etapa REPITE -->
+    <section class="seccion seccion--gris">
+      <div class="contenedor">
+        <div class="titulo-seccion">
+          <span class="antetitulo">Novedades</span>
+          <h2>Lo que ya logramos juntos</h2>
+          <div class="linea-turquesa"></div>
+        </div>
+        <div class="grilla grilla-3" id="lista-novedades"></div>
+      </div>
+    </section>
+
+    <!-- Agenda -->
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="titulo-seccion">
+          <span class="antetitulo">Agenda 2027</span>
+          <h2>Un año para sumarse al Penna</h2>
+          <div class="linea-turquesa"></div>
+        </div>
+        <div id="lista-eventos" data-limite="3"></div>
+        <p style="margin-top:20px"><a class="enlace" href="agenda.html">Ver la agenda completa</a></p>
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="seccion" style="padding-top:0">
+      <div class="contenedor">
+        <div class="cta">
+          <div>
+            <h2>¿Tenés una empresa en el Distrito Tecnológico?</h2>
+            <p>Sumate con una membresía corporativa o apadriná un equipamiento. Tu aporte es deducible del Impuesto a las Ganancias.</p>
+          </div>
+          <a class="btn btn--claro" href="dona.html#empresas">Ver opciones para empresas</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="pie"></div>
+  <script src="js/datos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

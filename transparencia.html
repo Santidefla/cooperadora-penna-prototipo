@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Transparencia · Cooperadora Hospital Penna</title>
+  <meta name="description" content="Rendición de cuentas de la Cooperadora del Hospital Penna: recaudación, compras, facturas y actas de donación.">
+  <link rel="icon" href="img/isotipo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body data-pagina="transparencia">
+  <div id="encabezado"></div>
+
+  <main id="contenido">
+    <section class="hero-chico">
+      <div class="contenedor">
+        <span class="antetitulo">Rendición de cuentas</span>
+        <h1>Transparencia</h1>
+        <p>Cada peso que entra y cada compra que sale, publicados. Los extractos se concilian con los libros contables y los audita el Órgano de Fiscalización.</p>
+      </div>
+    </section>
+
+    <section class="seccion" style="padding-bottom:40px">
+      <div class="contenedor">
+        <div class="contadores" style="margin-top:0">
+          <div class="contador">
+            <div class="numero" data-contador="recaudado">$0</div>
+            <div class="etiqueta">total recaudado</div>
+          </div>
+          <div class="contador">
+            <div class="numero" data-contador="saldo">$0</div>
+            <div class="etiqueta">disponible para las próximas compras</div>
+          </div>
+          <div class="contador">
+            <div class="numero" data-contador="empresas">0</div>
+            <div class="etiqueta">empresas con membresía</div>
+          </div>
+          <div class="contador">
+            <div class="numero" data-contador="entregas">0</div>
+            <div class="etiqueta">bienes entregados al hospital</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cómo garantizamos la transparencia -->
+    <section class="seccion seccion--gris">
+      <div class="contenedor">
+        <div class="titulo-seccion">
+          <span class="antetitulo">Cómo trabajamos</span>
+          <h2>Tres garantías para tu aporte</h2>
+          <div class="linea-turquesa"></div>
+        </div>
+        <div class="grilla grilla-3">
+          <article class="tarjeta">
+            <div class="icono icono--azul" data-icono="empresa"></div>
+            <h3>Cuenta oficial con doble firma</h3>
+            <p>Los fondos se depositan en una cuenta corriente del Banco Ciudad a nombre de la Cooperadora. Ningún pago sale con una sola firma.</p>
+          </article>
+          <article class="tarjeta">
+            <div class="icono" data-icono="documento"></div>
+            <h3>Legajo público por compra</h3>
+            <p>Presupuestos comparativos, factura del proveedor, remito y acta de donación firmada con las autoridades del hospital.</p>
+          </article>
+          <article class="tarjeta">
+            <div class="icono icono--rojo" data-icono="check"></div>
+            <h3>Control externo</h3>
+            <p>Revisores de cuentas independientes auditan los estados contables, que se presentan ante el Ministerio de Salud del GCBA.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Legajos de compras -->
+    <section class="seccion" id="legajos">
+      <div class="contenedor">
+        <div class="titulo-seccion">
+          <span class="antetitulo">Legajos de compras</span>
+          <h2>Compras entregadas al hospital</h2>
+          <p class="bajada">Cada compra se publica con su documentación, una vez que el bien está funcionando en el servicio.</p>
+          <div class="linea-turquesa"></div>
+        </div>
+
+        <div id="lista-legajos"></div>
+      </div>
+    </section>
+
+    <!-- Movimientos -->
+    <section class="seccion seccion--gris">
+      <div class="contenedor">
+        <div class="titulo-seccion">
+          <span class="antetitulo">Movimientos</span>
+          <h2>Últimos ingresos y egresos</h2>
+          <p class="bajada">Resumen mensual de la cuenta oficial en el Banco Ciudad.</p>
+        </div>
+        <div class="tabla-wrap">
+          <table>
+            <thead><tr><th scope="col">Fecha</th><th scope="col">Concepto</th><th scope="col">Monto</th></tr></thead>
+            <tbody id="tabla-movimientos"></tbody>
+          </table>
+        </div>
+        <p style="margin-top:20px"><button class="btn btn--secundario btn--chico" data-documento="el último informe mensual (agosto 2027)" data-motivo="controlar los ingresos, los egresos y el saldo de la cuenta">Descargar el último informe mensual</button></p>
+      </div>
+    </section>
+
+    <!-- Agradecimientos -->
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="titulo-seccion">
+          <span class="antetitulo">Gracias</span>
+          <h2>Quienes lo hacen posible</h2>
+          <p class="bajada">Publicamos el nombre solo de quienes lo autorizan.</p>
+        </div>
+        <div class="donantes" id="lista-donantes"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="pie"></div>
+  <script src="js/datos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

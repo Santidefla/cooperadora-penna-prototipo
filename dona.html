@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Doná · Cooperadora Hospital Penna</title>
+  <meta name="description" content="Asociate o hacé un aporte a la Cooperadora del Hospital Penna. Opciones para personas y empresas.">
+  <link rel="icon" href="img/isotipo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body data-pagina="dona">
+  <div id="encabezado"></div>
+
+  <main id="contenido">
+    <section class="hero-chico">
+      <div class="contenedor">
+        <span class="antetitulo">Sumate</span>
+        <h1>Doná o asociate</h1>
+        <p>Sin efectivo y sin trámites: todo el dinero ingresa a la cuenta oficial de la Cooperadora en el Banco Ciudad y recibís tu comprobante al instante.</p>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="pestanas" role="tablist" aria-label="Tipo de donante">
+          <button class="pestana" role="tab" aria-selected="true" aria-controls="panel-personas" id="tab-personas">Personas</button>
+          <button class="pestana" role="tab" aria-selected="false" aria-controls="panel-empresas" id="tab-empresas">Empresas</button>
+        </div>
+
+        <!-- PERSONAS -->
+        <div class="panel" id="panel-personas" role="tabpanel" aria-labelledby="tab-personas">
+          <div class="dos-columnas" style="align-items:start">
+            <form class="form-donacion" id="form-personas" novalidate>
+              <h2 style="font-size:1.5rem">Elegí cómo colaborar</h2>
+              <div class="tipo-aporte" role="radiogroup" aria-label="Tipo de aporte">
+                <div class="opcion">
+                  <input type="radio" name="tipo" id="tipo-mensual" value="mensual" checked>
+                  <label for="tipo-mensual">Cuota mensual<small>Débito automático</small></label>
+                </div>
+                <div class="opcion">
+                  <input type="radio" name="tipo" id="tipo-unico" value="unico">
+                  <label for="tipo-unico">Aporte único<small>Una sola vez</small></label>
+                </div>
+              </div>
+
+              <div class="montos" id="montos" role="radiogroup" aria-label="Monto"></div>
+              <div class="campo">
+                <label for="otro-monto">Otro monto</label>
+                <input type="number" id="otro-monto" inputmode="numeric" min="0" step="500" placeholder="Ingresá un monto en pesos">
+                <div class="ayuda" id="ayuda-minimo"></div>
+              </div>
+
+              <div class="campo">
+                <label for="nombre">Nombre y apellido</label>
+                <input type="text" id="nombre" autocomplete="name">
+              </div>
+              <div class="campo">
+                <label for="mail">Mail (para enviarte el comprobante)</label>
+                <input type="email" id="mail" autocomplete="email">
+              </div>
+              <div class="campo campo--check">
+                <label for="anonimo">Quiero que mi aporte figure como anónimo</label>
+                <input type="checkbox" id="anonimo">
+              </div>
+
+              <div class="medios" aria-label="Medios de pago">
+                <span class="medio">Mercado Pago</span><span class="medio">Payway</span><span class="medio">Transferencia Banco Ciudad</span>
+              </div>
+              <p class="error" id="error-donacion" role="alert"></p>
+              <button class="btn btn--donar" type="submit" style="width:100%">Continuar al pago</button>
+            </form>
+
+            <div>
+              <h2>Tu aporte, a la vista</h2>
+              <ul class="lista-check">
+                <li><strong>Cuota social mensual</strong>: el sostén de todos los meses. Sugeridas $5.000, $10.000 o $15.000 (mínimo $2.000).</li>
+                <li><strong>Aporte único</strong>: para campañas puntuales. Sugeridos $10.000, $15.000 o $20.000 (mínimo $5.000).</li>
+                <li>Los fondos se asignan según el orden de urgencia que define la Dirección del hospital.</li>
+                <li>Cuando se compra el bien, publicamos la factura, el acta y la foto del equipo funcionando.</li>
+              </ul>
+
+              <div class="tarjeta" style="margin-top:24px">
+                <div class="icono" data-icono="paquete"></div>
+                <h3>Donaciones en especie</h3>
+                <p>Para nuestras campañas: juguetes y libros para el Día de las Infancias, pañales y artículos de higiene para Maternidad, ropa de abrigo y alimentos no perecederos para las meriendas comunitarias.</p>
+                <a class="enlace" href="agenda.html">Ver campañas en la agenda</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EMPRESAS -->
+        <div class="panel" id="panel-empresas" role="tabpanel" aria-labelledby="tab-empresas" hidden>
+          <div class="titulo-seccion">
+            <h2>Programa de membresías</h2>
+            <p class="bajada">Para empresas del Distrito Tecnológico de Parque Patricios y comercios de la zona sur. Aporte mensual por débito o transferencia programada.</p>
+          </div>
+          <div class="grilla grilla-3">
+            <article class="tarjeta membresia">
+              <div class="icono" data-icono="empresa"></div>
+              <h3>Socio adherente comercial</h3>
+              <div class="precio">$30.000 <small>/ mes</small></div>
+              <button class="btn btn--secundario btn--chico" data-membresia="Socio adherente comercial">Quiero sumarme</button>
+            </article>
+            <article class="tarjeta membresia">
+              <div class="icono icono--azul" data-icono="empresa"></div>
+              <h3>Socio protector corporativo</h3>
+              <div class="precio">$100.000 <small>/ mes</small></div>
+              <button class="btn btn--secundario btn--chico" data-membresia="Socio protector corporativo">Quiero sumarme</button>
+            </article>
+            <article class="tarjeta membresia">
+              <div class="icono icono--rojo" data-icono="empresa"></div>
+              <h3>Socio benefactor institucional</h3>
+              <div class="precio">$500.000 <small>/ mes</small></div>
+              <button class="btn btn--secundario btn--chico" data-membresia="Socio benefactor institucional">Quiero sumarme</button>
+            </article>
+          </div>
+
+          <div class="grilla grilla-3" style="margin-top:22px">
+            <article class="tarjeta">
+              <div class="icono icono--azul" data-icono="corazon"></div>
+              <h3>Aporte único</h3>
+              <p>Destiná tu presupuesto anual de RSE a las necesidades más urgentes del hospital, con transferencia directa a la cuenta oficial.</p>
+            </article>
+            <article class="tarjeta">
+              <div class="icono" data-icono="rayos"></div>
+              <h3>Padrinazgo de equipamiento</h3>
+              <p>Financiá total o parcialmente un proyecto grande, como el Arco en C, la climatización de salas de espera o incubadoras.</p>
+              <button class="btn btn--secundario btn--chico" data-membresia="Padrinazgo de equipamiento">Quiero saber más</button>
+            </article>
+            <article class="tarjeta">
+              <div class="icono icono--rojo" data-icono="paquete"></div>
+              <h3>Donación en especie</h3>
+              <p>Catering y sonido para eventos, camisetas para subastas solidarias, insumos o servicios profesionales.</p>
+            </article>
+          </div>
+
+          <div class="dato-fiscal" style="margin-top:28px">
+            <h3>Beneficio impositivo</h3>
+            <p style="margin:0">Las donaciones son deducibles del Impuesto a las Ganancias. La Cooperadora emite el recibo exento homologado por ARCA.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="pie"></div>
+  <script src="js/datos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
